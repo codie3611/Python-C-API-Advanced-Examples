@@ -6,7 +6,8 @@ This is the inheritance example. The important parts are commented in the source
 # Example
 
 ```python
-from my_module import BaseClass
+from my_module import BaseClass, InheritanceClass
+
 bc = BaseClass()
 inh = InheritanceClass()
 
