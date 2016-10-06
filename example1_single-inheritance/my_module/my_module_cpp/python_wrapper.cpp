@@ -44,17 +44,16 @@ initmy_module_cpp(void) // The name after init MUST be the same name as in setup
 {
   PyObject* m;
 
-  // Constructor
+  // Create the class types
   if (PyType_Ready(&MyPy_BaseClass_Type) < 0)
+    return;
+  if (PyType_Ready(&MyPy_InheritanceClass_Type) < 0)
     return;
 
 
   // Init Module
-  m = Py_InitModule3("my_module_cpp", my_module_cpp_methods, // The name after init MUST be the same name as in setup.py
+  m = Py_InitModule3("my_module_cpp", my_module_cpp_methods, // The name must be the same as behind the init and in the setup script
                      "yay a module description.");
-
-  // Import numpy if needed
-  //import_array();
 
   if (m == NULL)
     // PY3 return NULL;
@@ -63,6 +62,9 @@ initmy_module_cpp(void) // The name after init MUST be the same name as in setup
   // Initialize Classes
   Py_INCREF(&MyPy_BaseClass_Type);
   PyModule_AddObject(m, "BaseClass", (PyObject *)&MyPy_BaseClass_Type); // This name is used for the import command!!!!
+  
+  Py_INCREF(&MyPy_InheritanceClass_Type);
+  PyModule_AddObject(m, "InheritanceClass", (PyObject *)&MyPy_InheritanceClass_Type);
 
 }
 
