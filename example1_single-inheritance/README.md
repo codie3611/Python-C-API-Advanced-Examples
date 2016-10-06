@@ -1,7 +1,7 @@
 
 # Example1 - Inheritance
 
-This is the inheritance example. The important parts are commented in the source code. The main differences can be achieved by letting the inheritance-class struct inherit the base-class struct. The base-class type must also be to the inheritance-class type block (there is an argument).
+This is the inheritance example. The important parts are commented in the source code. The main differences can be achieved by letting the inheritance-class struct inherit the base-class struct. The base-class type must also be given to the inheritance-class type block (there is an argument). The inheritance-class struct may not contain the casual define, which one usually uses, when creating a class.
 
 # Example
 
