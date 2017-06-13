@@ -12,7 +12,7 @@ from my_module import *
 
 Here is the list of the topics. From time to time new examples may drop in:
 
-1. [Inheritance](https://github.com/qd-codie/Python-C-API-Advanced-Examples/tree/master/example1-inheritance)
+1. [Inheritance](https://github.com/qd-codie/Python-C-API-Advanced-Examples/tree/master/example1_single-inheritance)
 2. in progress ...
 
 
