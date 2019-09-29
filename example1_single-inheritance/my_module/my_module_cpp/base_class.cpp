@@ -2,8 +2,8 @@
 /* DEALLOC */
 static void
 MyPy_BaseClass_dealloc(MyPy_BaseClass* self){
-   // Nothing to deallocate. Use this in case the base
-   // struct contains a pointer or so.
+   // deallocate class members and class itself
+   Py_TYPE(self)->tp_free((PyObject*)self);
 }
 
 /* NEW */
